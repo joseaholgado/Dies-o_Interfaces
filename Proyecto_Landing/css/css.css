@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Outfit', sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #000000;
+}
+ /*----------------------------- VIDEO+TEXTO+LOGO DEL HEADER -------------------------------------------*/
+
+header {
+    position: relative;
+    font-size: 35px;
+    height: 250px;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.video-container video {
+    width: 100%;
+    /* Ajusta este valor al tamaño que desees */
+    height: 100%;
+    /* Ajusta este valor al tamaño que desees */
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.header-content {
+    height: 250px;
+    position: relative;
+    z-index: 2;
+    display: flex; 
+    flex-direction: row-reverse;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    color: #ffa500;
+}
+.texto{
+    
+    font-family: 'Outfit', sans-serif;
+}
+.logo {
+   position: absolute;
+   left: 25px;
+   
+}
+svg{
+    width: 250px;
+    height: 250px;
+}
+
+
+/*-------------------------------------Sección Main-------------------------------------- */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+
+
+/*-------------------------------------Reproductor de audio-------------------------------------- */
+
+.contenedor {
+    margin-left: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3em;
+    background-color: #99793D;
+    border-radius: 10px; 
+    font-size: 20px;
+}
+
+#song-selector {
+    /* Cambiar la fuente y el tamaño de la fuente */
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    margin-bottom:2em;
+  
+    /* Cambiar el color de fondo y el color del texto */
+    background-color: #f8f9fa;
+    color: #343a40;
+  
+    /* Añadir un poco de relleno */
+    padding: 10px;
+  
+    /* Añadir un borde */
+    border: 3px solid #ffa500;
+    border-radius: 4px;
+  
+    /* Añadir un poco de margen */
+    margin: 10px 0;
+  }
+  
+  #song-selector:focus {
+    /* Cambiar el color del borde cuando el selector está enfocado */
+    border-color: #ffa500;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(1, 1, 1, 0.25);
+  }
+
+h3 {
+    color: #343a40;
+    margin-top: 1em;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.card {
+    transition: 0.3s;
+    background-color: #99793D ;
+}
+
+
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+}
+
+.card-body {
+    padding: 1em;
+    text-align: center;
+}
+
+.card-title {
+    margin-bottom: 1.5em;
+    color: #343a40;
+    font-size: 1.25em;
+}
+
+.progress {
+    width: 100%;
+    height: 8px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    box-shadow: inset 0 0 5px #000000;
+}
+
+/* Barra de progreso */
+.progress-bar {
+    height: 100%;
+    background-color: #FFA500 ;
+    width: 0%; /* Este valor se actualiza dinámicamente con JavaScript */
+    border-radius: 4px;
+    transition: width 0.5s ease-in-out; /* Transición suave de la barra de progreso */
+}
+
+/* Botones de control */
+.btn {
+    background-color: #f8f9fa;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;   
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #332F29;
+    color: #FFA500 ;
+}
+
+.progress {
+    margin: 10px 0;
+}
+
+h5 {
+    margin-bottom: 0 !important;
+}
+
+p {
+    font-size: 14px;
+    font-style: italic;
+}
+
+#pause {
+    display: none;
+}
+
+#unmute {
+    display: none;
+}
+
+
+/*-------------------------------------Sección de los canvas-------------------------------------- */
+.canvas-container {
+    margin-top: 8em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+
+canvas {
+    border: 1px solid #FFA500;
+}
+#canvas1{
+    border-top-left-radius: 20%;
+}
+#canvas2{
+    border-top-right-radius: 20%;
+}
+#canvas3{
+    border-bottom-left-radius: 20%;
+}
+#canvas4{
+    border-bottom-right-radius: 20%;
+}
+.canvas-3d{
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin-top: 1em;
+}
+#three3d{
+    margin-top: 2em;
+    border-radius: 10px;
+}
+
+
+/*-------------------------------------Footer 3D-------------------------------------- */
+@media (min-width: 761px) and (max-width: 900px) {
+    .texto{
+        /* margin-right:-162px; */
+        font-size: 30px;
+    }
+    .canvas-container {
+        margin-top: 3em;
+        
+    }
+
+    svg{
+        width: 200px;
+        height: 200px;
+    }
+}
+@media (max-width: 760px) {
+    body {
+        display:flex;      
+    }
+
+    header {
+        font-size: 24px;
+        height: 300px;
+    }
+    .header-content {
+        display: flex;
+        flex-direction: column;
+        z-index: 2;   
+        color: #ffa500;
+    }
+    .texto{
+        height: 80px;
+    }
+    svg{
+        width: 170px;
+        height: 170px;
+    }
+    .logo{
+        
+        position: static;
+    }
+    /*-------------------------------------Sección Main-------------------------------------- */
+    main{
+        margin-top:1em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /*-------------------------------------Reproductor de audio-------------------------------------- */
+    .contenedor {
+        margin-top: 1em;
+        margin-left: 8em;
+        margin-right: 8em;
+    }
+    .card{
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 10px; 
+    }
+    .btn {
+        padding: 5px 10px;
+        font-size: 12px;
+        margin: 2px 1px;
+    }
+
+    .video-container video {
+        width: 100%;
+        height: 300px;
+    }
+
+    .header-content {
+        padding-top: 2%;
+    }
+    canvas {
+        width: 100%;
+        height: 100%;
+    }
+    .canvas-container {
+        margin-top: 3em;
+        
+    }
+    .canvas-3d{
+        margin-top: 1.5em;
+    }
+
+   
+}

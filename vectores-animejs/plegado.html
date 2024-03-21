@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plegado</title>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    #contenedor {
+      background-color: rgb(245, 245, 220);
+      width: 100%;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    #texto {
+     
+      width: 30%;
+      height: 30%;
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      color: rgb(20, 95, 20);
+      font-family: "IBM Plex Mono", monospace;;
+      font-size: 1.5rem;
+      text-justify: newspaper;
+      opacity: 0;
+      transition: opacity 7s;
+    
+      
+    }
+
+    #titulo {
+      text-align: right;
+    }
+
+    #plegable {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      transition: transform 2s;
+    }
+
+    #boton {
+      width: 300px;
+      height: 300px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+      transition: opacity 2s;
+    }
+
+    #boton text {
+      transition: opacity 2s;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="contenedor">
+    <div id="texto">
+      <p>"La muerte nos sonríe a todos, devolvámosle la sonrisa"</p>
+      <p id="titulo">Jose Antonio Holgado Bonet</p>
+    </div>
+
+
+    <svg id="plegable">
+      <polygon id="poligono" points="0,0 2520,0 2520,1080 0,1980 0,0" style="fill: rgb(20, 95, 20)" />
+    </svg>
+
+    <div id="boton">
+      <image src="logo.svg" width="100%" height="100%"></image>
+    </div>
+  </div>
+  <script>
+
+    document.querySelector('#boton').addEventListener('click', function () {
+      let poligono = document.getElementById('poligono');
+      let puntos = poligono.getAttribute('points').split(' ').map(p => p.split(',').map(Number));
+      let punto = { x: puntos[1][0], y: puntos[1][1] };
+
+      let animacion = anime.timeline({
+        easing: 'easeInOutSine',
+        update: function () {
+          puntos[1] = [punto.x, punto.y];
+          poligono.setAttribute('points', puntos.map(p => p.join(',')).join(' '));
+        }
+      });
+
+      animacion       
+        .add({
+          targets: punto,
+          x: 550,
+          y: 600,
+          round: 1,
+          duration: 2000
+        });
+        
+
+      document.querySelector('#boton').style.opacity = '0';
+      document.querySelector('#texto').style.opacity = '1';
+    });
+  </script>
+
+</body>
+
+</html>

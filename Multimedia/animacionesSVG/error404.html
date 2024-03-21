@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+</head>
+<style>
+    #ejemplo {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+    }
+    #ejemploSVG {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+    }
+</style>
+
+<body>
+    <div id="ejemplo"></div>
+    <svg id="ejemploSVG">
+        <circle cx="170" cy="100" r="50" fill="#f00"></circle>
+    </svg>
+    <svg id="ejemploSVG">
+        <circle cx="170" cy="100" r="50" fill="#f00"></circle>
+    </svg>
+    <svg id="ejemploSVG">
+        <circle cx="170" cy="100" r="50" fill="#f00"></circle>
+    </svg>
+</body>
+    <script>
+        var elements=document.querySelectorAll("#ejemploSVG");
+        anime({
+            targets:'#ejemplo', elements,
+            translateX: 150,
+            duration: 5000
+        })
+    </script>
+</html>

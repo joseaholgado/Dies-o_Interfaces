@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>My first three.js app</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            font-family: sans-serif;
+            position: relative;
+            /* Asegúrate de que el body es relativo para que el div se posicione correctamente */
+        }
+
+        button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 1;
+        }
+
+
+        #audioBoton {
+            background-color: #000000;
+            /* Black */
+            border: 2px solid #D4AF37;
+            /* Gold */
+            color: #D4AF37;
+            /* Gold */
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            transition-duration: 0.4s;
+            border-radius: 25px;
+            /* Rounded corners */
+        }
+
+        #audioBoton:hover {
+            background-color: #D4AF37;
+            /* Gold */
+            color: #000000;
+            /* Black */
+        }
+
+        #info1 {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 4em;
+            z-index: 1;
+            color:gold;
+            text-shadow: 6px 6px 4px rgba(255, 255, 255, 0.5);
+
+            /* Asegúrate de que el div está encima del canvas */
+        }
+
+        #info2 {
+            position: absolute;
+            width: 240px;
+            top: 60%;
+            left: 52%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 2em;
+            z-index: 1;
+            opacity: 0;
+            text-shadow: 3px 3px 2px rgba(255, 255, 255, 0.5);
+            /* Asegúrate de que el div está encima del canvas */
+        }
+
+        #info3 {
+            position: absolute;
+            width: 980px;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 2em;
+            z-index: 1;
+            opacity: 0;
+            
+            text-shadow: 3px 3px 2px rgba(255, 255, 255, 0.5);
+            /* Asegúrate de que el div está encima del canvas */
+        }
+
+        #info4 {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 2em;
+            z-index: 1;
+            opacity: 0;
+           
+            text-shadow: 3px 3px 2px rgba(255, 255, 255, 0.5);
+            /* Asegúrate de que el div está encima del canvas */
+        }
+
+        #info5 {
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 2em;
+            z-index: 1;
+            opacity: 0;
+            text-shadow: 3px 3px 2px rgba(255, 255, 255, 0.5);
+            /* Asegúrate de que el div está encima del canvas */
+        }
+
+        #contenedor p {
+            width: 100%;
+            /* Ajusta el tamaño del párrafo a la anchura de su contenedor */
+            font-size: 1em;
+            /* Ajusta el tamaño de la fuente en relación con el tamaño del div */
+        }
+    </style>
+</head>
+
+<body>
+
+    <audio id="audio" src="joyeria.mp3" autoplay loop></audio>
+    <button id="audioBoton" onclick="audio()">Song</button>
+    <!-- Agregar un div y texto encima del canvas -->
+    <div id="contenedor">
+
+        <div id="info1">
+            <p id="texto1">Jellwery Luxury</p>
+        </div>
+        <div id="info2">
+            <p>Celebrando la belleza y la elegancia en cada detalle</p>
+
+        </div>
+        <div id="info3">
+            <p>La artesanía más elegante con materiales lujosos es lo que necesita</p>
+        </div>
+        <div id="info4">
+            <p id="texto2">Utilizamos elementos que adornarán tus sueños</p>
+        </div>
+        <div id="info5">
+            <p id="texto2">Explora la joyería de lujo, donde cada pieza es un legado para las generaciones futuras.</p>
+        </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+    <script>
+        function audio() {
+            let audio = document.getElementById("audio");
+
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+    </script>
+</body>
+
+</html>

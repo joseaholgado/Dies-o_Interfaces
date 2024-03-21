@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   sodipodi:docname="logo1.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+   
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="1.3843855"
+     inkscape:cx="306.63424"
+     inkscape:cy="549.3412"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="404"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       style="fill:#bc0000;fill-opacity:1;stroke-width:0.264583"
+       id="path1"
+       cx="101.8014"
+       cy="125.78724"
+       r="43.766411"
+        />
+       
+    <ellipse
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.24218"
+       id="path2"
+       cx="101.8014"
+       cy="125.78724"
+       rx="33.254826"
+       ry="32.872585" />
+    <rect
+       style="fill:#2e0fc1;fill-opacity:1;stroke-width:0.189967"
+       id="rect5"
+       width="124.2278"
+       height="22.169884"
+       x="39.6875"
+       y="114.7023" />
+    <text
+       xml:space="preserve"
+       style="font-size:12.3142px;fill:#ffffff;fill-opacity:1;stroke-width:1.026;stroke-dasharray:none"
+       x="59.844097"
+       y="125.82369"
+       id="texto"
+       transform="scale(0.96470175,1.0365898)"><tspan
+         sodipodi:role="line"
+         id="tspan5"
+         style="fill:#ffffff;fill-opacity:1;stroke-width:1.026;stroke-dasharray:none"
+         x="59.844097"
+         y="125.82369">UNDEGROUND</tspan></text>
+  </g>
+</svg>

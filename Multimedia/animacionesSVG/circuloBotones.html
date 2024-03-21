@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+    <style>
+        .boton {
+            display: inline-block;
+            width: 100px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <svg width="400" height="400" id="circulo">
+        <!-- Circulo -->
+        <circle cx="100" cy="100" r="50" fill="blue" />
+
+    </svg>
+    <button class="boton" id="start">Start</button>
+    <button class="boton" id="ensanchar">Ensanchar</button>
+    <button class="boton" id="diagonal">Diagonal</button>
+    <button class="boton" id="todo">Todo</button>
+
+    <script>
+        var circulo = document.querySelector('#circulo');
+        var animation = anime({
+            targets: circulo,
+            translateX: 270,
+            delay: function (el, i) { return i * 100; },
+            direction: 'alternate',
+            loop: true,
+            autoplay: false,
+            easing: 'easeInOutSine'
+        });
+
+        document.querySelector('#start').onclick = function () {
+            animation.play();
+        };
+
+        document.querySelector('#ensanchar').onclick = function () {
+            animation.restart();
+            animation.reverse();
+            animation.play();
+        };
+
+        document.querySelector('#diagonal').onclick = function () {
+            animation.restart();
+            animation.reverse();
+            animation.play();
+            anime({
+                targets: circulo,
+                translateX: 270,
+                translateY: 200,
+                easing: 'easeInOutSine',
+                duration: 1000
+            });
+        };
+
+        document.querySelector('#todo').onclick = function () {
+            animation.restart();
+            animation.reverse();
+            animation.play();
+            anime({
+                targets: circulo,
+                translateX: 270,
+                translateY: 200,
+                easing: 'easeInOutSine',
+                duration: 1000
+            });
+        };
+    </script>
+
+</body>
+
+</html>

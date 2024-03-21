@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  
+}
+
+object {
+  display: block;
+  margin: auto;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+#logo,
+#error {
+  position: absolute;
+
+}
+#error{
+  width: 60%;
+  height: 60%;
+  margin-left:15%;
+}
+#textoError{
+  position: absolute;
+  top: 30%;
+  font-size: 2em;
+  display:none;
+  
+
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+.ellipsis {
+  position: relative;
+  margin-right: 100%;
+  width: 100px;
+  height: 40px;
+}
+
+.dot {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.dot:nth-child(1) {
+  left: 0;
+}
+
+.dot:nth-child(2) {
+  left: 30px;
+}
+
+.dot:nth-child(3) {
+  left: 60px;
+}

@@ -1,0 +1,11 @@
+Model Information:
+* title:	medieval ring
+* source:	https://sketchfab.com/3d-models/medieval-ring-960b06c1afd74506a2077109ea1601f1
+* author:	Jean Christophe Perret (https://sketchfab.com/zlork)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "medieval ring" (https://sketchfab.com/3d-models/medieval-ring-960b06c1afd74506a2077109ea1601f1) by Jean Christophe Perret (https://sketchfab.com/zlork) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
